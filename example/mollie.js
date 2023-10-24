@@ -9,7 +9,6 @@ const createApplication = require('./');
 const { AuthorizationCode } = require('./../');
 
 createApplication(({ app, callbackUrl }) => {
-  console.log('id, secret::', process.env.CLIENT_ID, process.env.CLIENT_SECRET)
   const client = new AuthorizationCode({
     client: {
       id: 'app_2BFd4oZAHMXQ3dWNSHnXn3gv',
