@@ -44,7 +44,7 @@ createApplication(({ app, callbackUrl }) => {
       'Content-Type': 'application/x-www-form-urlencoded'
     };
 
-    var dataString = `grant_type=authorization_code&code=${code}`;
+    var dataString = `grant_type=authorization_code&code=${code}&redirect_uri=${callbackUrl}`;
 
     var options = {
       url: 'https://api.mollie.com/oauth2/tokens',
