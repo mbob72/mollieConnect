@@ -14,7 +14,7 @@ let serverHttps = https.createServer(sslOptions, app).listen(443)
 const port = 3000;
 
 module.exports = (cb) => {
-  const callbackUrl = 'https://bidding.eccube.de';
+  const callbackUrl = 'https://bidding.eccube.de/callback';
 
   app.listen(port, (err) => {
     if (err) return console.error(err);
