@@ -71,6 +71,7 @@ createApplication(({ app, callbackUrl }) => {
 
     const order = await mollieClient.orders.create({
       profileId: 'pfl_WU9mjR6SEG',
+      testmode: true,
       amount: {
         value: '1027.99',
         currency: 'EUR'
@@ -161,6 +162,21 @@ createApplication(({ app, callbackUrl }) => {
     });
 
     console.log('order::', order)
+
+    // const options2 = {
+    //   url: 'https://api.mollie.com/v2/payments/tr_XJCZz9XuVX/captures',
+    //   method: 'POST',
+    //   headers: { Authorization: `Bearer ${access_token}`},
+    //   body: JSON.stringify({ testmode: true }),
+    // };
+    // const resultCapture = await new Promise(res => {
+    //   request(options2, function callback(error, response, body) {
+    //     res(body);
+    //   })
+    // })
+    //
+    // console.log(resultCapture);
+
 
     return res.status(200).json(code);
   });
